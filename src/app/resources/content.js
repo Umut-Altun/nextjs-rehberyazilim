@@ -1,24 +1,24 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Umut",
+  lastName: "Altun",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Yazılım ve Web Geliştiricisi",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Europe/Istanbul", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["İngilizce", "Türkçe"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>{person.firstName}'un Bültenine Abone Ol</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Tasarım, teknoloji hakkında yazıyor ve yaratıcılık ile mühendisliğin kesişimi 
+      üzerine düşüncelerimi paylaşıyorum.
     </>
   ),
 };
@@ -26,15 +26,16 @@ const newsletter = {
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
+  
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Umut-Altun",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/umut-altun-bb4918284",
   },
   {
     name: "X",
@@ -44,27 +45,32 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "altunumut7@gmail.com",
+  },
+  {
+    name: "YouTube",
+    icon: "youtube",
+    link: "https://www.youtube.com/@yapayrehber",
   },
 ];
 
 const home = {
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  label: "Ana Sayfa",
+  title: `${person.name}'un Portfolyosu`,
+  description: `${person.role} olarak çalışmalarımı sergileyen portfolyo web sitesi`,
+  headline: <>Yazılım Geliştirici ve İçerik Üreticisi</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Ben Umut, <InlineCode>Yapay Rehber</InlineCode>'in kurucusu ve baş geliştiricisiyim. Web teknolojileri ve yapay zeka alanında 4+ yıllık deneyimimle, 
+      modern yazılım çözümleri geliştiriyor ve dijital dönüşüm süreçlerine öncülük ediyorum. 
     </>
   ),
 };
 
 const about = {
-  label: "About",
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Hakkımda",
+  title: "Hakkımda",
+  description: `${person.location}'dan ${person.role} ${person.name} ile tanışın`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -74,35 +80,32 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://www.youtube.com/@yapayrehber",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Giriş",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      Yazılım geliştirme alanında deneyimli bir geliştirici ve içerik üreticisiyim. Web tabanlı projeler, masaüstü uygulamalar, otomasyon sistemleri ve kullanıcı dostu arayüzler geliştirerek, ihtiyaçlara özel çözümler sunuyorum. 
+      Farklı teknolojilerle gerçek dünyaya uygun projeler üretiyor; aynı zamanda bu süreçleri YouTube kanalımda paylaşarak öğrenmek isteyenlere rehberlik ediyorum.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Proje ve İş Deneyimi",
     experiences: [
       {
-        company: "FLY",
+        company: "RehberAdisyon",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Yazılım Geliştiricisi",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Restoran yönetimi ve dijital adisyon sistemleri geliştirerek işletmelerin operasyonel verimliliğini artırdım.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Python ve Django kullanarak ölçeklenebilir web uygulamaları geliştirip müşteri memnuniyetine katkıda bulundum.
           </>,
         ],
         images: [
@@ -116,17 +119,15 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "University Projects",
+        timeframe: "2018 - 2020",
+        role: "Girişimci Geliştirici",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Üniversite projeleri kapsamında öğrencilere yönelik öğrenme yönetim sistemleri ve etkileşimli web uygulamaları geliştirdim.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Açık kaynak projelerde aktif rol alarak topluluk katkıları sağladım.
           </>,
         ],
         images: [],
@@ -135,25 +136,25 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Eğitim",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Boğaziçi Üniversitesi",
+        description: <>Bilgisayar Mühendisliği alanında lisans eğitimi aldım.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Coursera / Udemy",
+        description: <>Modern yazılım teknolojileri, metodolojileri ve proje yönetimi konularında online kurslar tamamladım.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Teknik Beceriler",
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: <>Once UI ile Figma'da olağanüstü hızda prototip oluşturabiliyorum.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -172,7 +173,7 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Next.js + Once UI + Supabase ile yeni nesil uygulamalar geliştiriyorum.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -189,94 +190,29 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Yazılım ve teknoloji hakkında yazılar...",
+  description: `${person.name}'in son zamanlarda neler yaptığını okuyun`,
+  // app/blog/posts'a yeni bir .mdx dosyası ekleyerek yeni blog gönderileri oluşturun
+  // Tüm gönderiler /blog rotasında listelenecektir
 };
 
 const work = {
-  label: "Work",
-  title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  label: "Çalışmalar",
+  title: "Projelerim",
+  description: `${person.name} tarafından tasarlanan ve geliştirilen projeler`,
+  // Yeni proje sayfaları eklemek için app/blog/posts dizinine yeni bir .mdx dosyası ekleyin
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
-  label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
+  label: "Galeri",
+  title: "Fotoğraf galerim",
+  description: `${person.name} tarafından oluşturulan fotoğraf koleksiyonu`,
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
+      src: "/images/gallery/django.png",
+      alt: "django",
       orientation: "horizontal",
     },
   ],

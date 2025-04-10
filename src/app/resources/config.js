@@ -8,10 +8,11 @@ const routes = {
   "/gallery": true,
 };
 
-// Enable password protection on selected routes
-// Set password in the .env file, refer to .env.example
+// Seçilen sayfalarda parola korumasını etkinleştirin
+// .env dosyasında parola belirleyin, .env.example dosyasına bakın
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  // "/work/rehberpos": false,
+  // "/work/aicu-web": true,
 };
 
 const style = {
