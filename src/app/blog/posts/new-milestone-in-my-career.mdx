@@ -1,69 +1,25 @@
 ---
-title: "İlk Django Projesi Nasıl Oluşturulur Adım Adım"
-publishedAt: "2025-04-10"
-image: "/images/gallery/django.png"
-summary: "Her geliştirici yolculuğuna bir 'merhaba dünya' projesiyle başlar. Benim için bu, Django ile oluşturduğum ilk proje oldu. Bu yazıda süreci adım adım anlatıyorum."
-tag: "Günlük"
+title: "Manus İle Web Tabanlı Oyun Geliştirme"
+publishedAt: "2025-04-11"
+image: "/images/gallery/manus.png"
+summary: "Manus ile geliştirdiğim ilk web tabanlı oyun projesidir. Bu yazıda süreci adım adım anlatıyorum."
+tag: "Oyun Geliştirme"
 ---
 
-Her geliştiricinin yolculuğunda bazı anlar vardır ki onları unutmak imkansızdır. Bu anlardan biri de ilk tam teşekküllü Django projemi başarıyla çalıştırdığım andı. Hem sanal ortam kurulumu hem de Django ile ilk web sayfasını çalıştırmak… Bu yazıda, bu heyecan verici başlangıç sürecini seninle paylaşmak istiyorum.
+Manus, yapay zekâ destekli bir geliştirme ortamı sunuyor ve neredeyse hiç kod yazmadan oyunlar oluşturmamızı sağlıcak mı? “Hadi bir deneyelim” diyerek başladım aslında. Başta basit bir oyun yapmak istedim sonuç ise bu. Her adımda sistemin bana önerilerde bulunması, hata yaparsam alternatifler sunması gerçekten çok etkileyiciydi. Kod yazma özgürlüğünü tamamen bırakmadan, yapay zekânın rehberliğiyle bir oyun geliştirmek… ne kadar iyi olabilir di görelim.
 
-## Yolculuğa Başlarken: Hazırlık Aşaması
+## İlk Oyunu Oluşturmak
 
-Python’un gücünü keşfettikten sonra, onun web framework’ü olan Django ile tanışmak benim için bir dönüm noktasıydı. Ancak ilk adım her zaman ortamı doğru kurmakla başlıyor. Bu süreçte öğrendiğim en önemli şey: Doğru bir kurulum, stabil bir geliştirme sürecinin temelidir.
+Manus’un arayüzü oldukça kullanıcı dostu. İlk sahnemi oluşturduktan sonra, oyuncunun fare tıklamalarıyla karakteri hareket ettirebildiği bir yapı kurdum. Ardından kullanıcı giriş sistemi, skor takibi ve sahne geçişleri gibi öğeleri ekledim.
 
 <CodeBlock className="my-24"
     compact
     codeInstances={[
         {
-            code: "python -m venv venv\nsource venv/bin/activate  # Windows için: venv\\Scripts\\activate\npip install django",
-            label: "Sanal Ortam ve Django Kurulumu",
-            language: "bash"
+            code: "Manus Studio > New Project > Web Game > Create Scene > Add Button > Add JS Logic",
+            label: "Manus Projesi Oluşturma Adımları",
+            language: "markdown"
         },
     ]}
     copyButton
 />
-
-## İlk Projeyi Oluşturmak
-
-Kurulumdan sonra Django’nun gücünü ilk kez deneyimlemek çok heyecan vericiydi. Konsola şu komutu yazdığımda artık kendi projeme sahip olmuştum:
-
-<CodeBlock className="my-24"
-    compact
-    codeInstances={[
-        {
-            code: "django-admin startproject ilkprojem\ncd ilkprojem\npython manage.py runserver",
-            label: "Django Proje Başlatma",
-            language: "bash"
-        },
-    ]}
-    copyButton
-/>
-
-Ve tarayıcıya `http://127.0.0.1:8000/` yazdığımda karşıma çıkan “The install worked successfully!” mesajı… İşte bu, benim için yazılım dünyasında atılmış gerçek bir adımdı.
-
-## Bu Anın Anlamı
-
-İlk defa kendi başıma, sıfırdan bir web uygulaması çalıştırmıştım. Django’nun sunduğu modüler yapı, admin paneli, URL yönlendirme sistemi gibi kavramlar artık teoriden pratiğe geçmişti. Bu, sadece teknik bir başarı değil, aynı zamanda kişisel bir zaferdi.
-
-## Zorluklar ve Kazanımlar
-
-İlk başta sanal ortamla ilgili bazı sorunlar yaşadım. Komut satırında aktifleşmeyen environment, eksik Python sürümü hataları… Ama her hata, bana terminalin dilini daha iyi öğretmeye başladı. Her "error" mesajı, daha dikkatli düşünmeyi ve çözüm aramayı öğretti.
-
-## Yeni Fırsatlara Açılan Kapı
-
-Bu başlangıç sayesinde artık Django’nun Model-View-Template yapısına hakimim. Yeni uygulamalar, blog sistemleri, kullanıcı kayıt modülleri gibi birçok projeyi hayata geçirebileceğimin farkına vardım. En güzeli de şu: artık projelerimi canlıya da alabilirim!
-
-![Django logosu yeşil arka planda.](/images/gallery/django.png)
-
-## Teşekkür ve İlham
-
-Bu süreçte kaynaklardan, forumlardan, YouTube videolarından ve topluluklardan çok destek aldım. Kod yazmak bireysel bir uğraş gibi görünse de, aslında kolektif bir çabanın meyvesidir. Her satır kodda başkalarının da izi vardır.
-
-## Yolun Devamı
-
-Artık biliyorum ki bu sadece bir başlangıç. Django’nun sunduğu sınırsız olanakları keşfetmek, yeni projelerle portföyümü büyütmek ve belki bir gün başkalarına da bu yolculukta ilham vermek istiyorum. Eğer sen de bu yolda ilk adımını atmak istiyorsan, en iyi zaman şimdi!
-
----
-
-Sana da bu yolda başarılar ve bol kod satırı diliyorum!
