@@ -1,4 +1,15 @@
 import { Column, Heading, Text } from "@/once-ui/components";
+import { baseURL } from "@/app/resources";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sayfa Bulunamadı - 404",
+  description: "Aradığınız sayfa bulunamadı. Lütfen farklı bir sayfa deneyin.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (

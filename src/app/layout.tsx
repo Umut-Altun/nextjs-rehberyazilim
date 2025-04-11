@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from "@/app/resources";
 
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
@@ -17,13 +17,35 @@ export async function generateMetadata() {
     metadataBase: new URL(`https://${baseURL}`),
     title: home.title,
     description: home.description,
+    applicationName: `Rehber Yazılım - Web ve Yazılım Çözümleri`,
+    authors: [{ name: person.name, url: `https://${baseURL}` }],
+    keywords: ["yazılım şirketi", "web geliştirme", "yazılım çözümleri", "özel yazılım", "rehber yazılım"],
+    creator: person.name,
+    publisher: person.name,
+    alternates: {
+      canonical: `https://${baseURL}`,
+    },
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
-      url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
-      locale: "en_US",
+      title: `Rehber Yazılım - Web ve Yazılım Çözümleri`,
+      description: "Modern yazılım ve web çözümleri sunan teknoloji şirketi",
+      url: `https://${baseURL}`,
+      siteName: `Rehber Yazılım`,
+      locale: "tr_TR",
       type: "website",
+      images: [
+        {
+          url: `https://${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+          width: 1200,
+          height: 630,
+          alt: home.title,
+        }
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: home.title,
+      description: home.description,
+      images: [`https://${baseURL}/og?title=${encodeURIComponent(home.title)}`],
     },
     robots: {
       index: true,
@@ -39,9 +61,10 @@ export async function generateMetadata() {
   };
 }
 
-const primary = Inter({
+const primary = Poppins({
   variable: "--font-primary",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -72,7 +95,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <Flex
       as="html"
-      lang="en"
+      lang="tr"
       background="page"
       data-neutral={style.neutral}
       data-brand={style.brand}

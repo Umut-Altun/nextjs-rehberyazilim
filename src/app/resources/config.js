@@ -1,4 +1,4 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "umut-altun-portfolio.vercel.app";
 
 const routes = {
   "/": true,

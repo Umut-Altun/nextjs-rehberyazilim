@@ -5,19 +5,29 @@ export default async function sitemap() {
   const blogs = getPosts(["src", "app", "blog", "posts"]).map((post) => ({
     url: `https://${baseURL}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
+    changeFrequency: 'monthly',
+    priority: 0.8,
   }));
 
   const works = getPosts(["src", "app", "work", "projects"]).map((post) => ({
     url: `https://${baseURL}/work/${post.slug}`,
     lastModified: post.metadata.publishedAt,
+    changeFrequency: 'monthly',
+    priority: 0.8,
   }));
 
   const activeRoutes = Object.keys(routesConfig).filter((route) => routesConfig[route]);
 
-  const routes = activeRoutes.map((route) => ({
-    url: `https://${baseURL}${route !== "/" ? route : ""}`,
-    lastModified: new Date().toISOString().split("T")[0],
-  }));
+  const routes = activeRoutes.map((route) => {
+    // Ana sayfaya daha yüksek öncelik verin
+    const priority = route === "/" ? 1.0 : 0.9;
+    return {
+      url: `https://${baseURL}${route !== "/" ? route : ""}`,
+      lastModified: new Date().toISOString().split("T")[0],
+      changeFrequency: 'weekly',
+      priority,
+    };
+  });
 
   return [...routes, ...blogs, ...works];
 }

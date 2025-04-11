@@ -35,22 +35,28 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
     image,
     team,
   } = post.metadata;
-  let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
+  let ogImage = image ? `https://${baseURL}${image}` : images && images.length > 0 ? `https://${baseURL}${images[0]}` : `https://${baseURL}/og?title=${title}`;
 
   return {
     title,
     description,
-    images,
-    team,
+    alternates: {
+      canonical: `https://${baseURL}/work/${post.slug}`,
+    },
+    keywords: ["proje", "portfolyo", "yazılım geliştirme", person.firstName, person.lastName],
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime,
       url: `https://${baseURL}/work/${post.slug}`,
+      locale: "tr_TR",
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
         },
       ],
     },
@@ -83,19 +89,44 @@ export default function Project({ params }: WorkParams) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            "@type": "Project",
+            name: post.metadata.title,
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
+            image: post.metadata.images && post.metadata.images.length > 0
+              ? `https://${baseURL}${post.metadata.images[0]}`
+              : post.metadata.image
               ? `https://${baseURL}${post.metadata.image}`
               : `https://${baseURL}/og?title=${post.metadata.title}`,
             url: `https://${baseURL}/work/${post.slug}`,
             author: {
               "@type": "Person",
               name: person.name,
+              image: {
+                "@type": "ImageObject",
+                url: `https://${baseURL}${person.avatar}`,
+              },
+              jobTitle: person.role,
             },
+            creator: {
+              "@type": "Person",
+              name: person.name,
+            },
+            publisher: {
+              "@type": "Person",
+              name: person.name,
+              image: {
+                "@type": "ImageObject",
+                url: `https://${baseURL}${person.avatar}`,
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://${baseURL}/work/${post.slug}`
+            },
+            inLanguage: "tr-TR"
           }),
         }}
       />

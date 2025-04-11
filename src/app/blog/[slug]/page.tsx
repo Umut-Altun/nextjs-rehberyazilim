@@ -34,21 +34,30 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
     images,
     image,
     team,
+    tag
   } = post.metadata;
   let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://${baseURL}/blog/${post.slug}`,
+    },
+    keywords: [tag, "blog", "yazılım", "teknoloji", person.firstName, person.lastName].filter(Boolean),
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime,
       url: `https://${baseURL}/blog/${post.slug}`,
+      locale: "tr_TR",
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
         },
       ],
     },
@@ -93,7 +102,26 @@ export default function Blog({ params }: BlogParams) {
             author: {
               "@type": "Person",
               name: person.name,
+              image: {
+                "@type": "ImageObject",
+                url: `https://${baseURL}${person.avatar}`,
+              },
+              jobTitle: person.role,
             },
+            publisher: {
+              "@type": "Person",
+              name: person.name,
+              image: {
+                "@type": "ImageObject",
+                url: `https://${baseURL}${person.avatar}`,
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://${baseURL}/blog/${post.slug}`
+            },
+            keywords: post.metadata.tag || "blog",
+            inLanguage: "tr-TR"
           }),
         }}
       />

@@ -25,17 +25,16 @@ export const Footer = () => {
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
+          <Text paddingX="4">Rehber Yazılım</Text>
           <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            / Portfolyonuzu{" "}
+            / Tüm hakları saklıdır.{" "}
             <SmartLink
               style={{ marginLeft: "-0.125rem" }}
               href="https://www.youtube.com/@yapayrehber"
+              rel="noopener"
             >
-              Rehber Yazılım
+              İletişim
             </SmartLink>
-            {""}ile dönüştürün.
           </Text>
         </Text>
         <Flex gap="16">
@@ -49,6 +48,8 @@ export const Footer = () => {
                   tooltip={item.name}
                   size="s"
                   variant="ghost"
+                  rel="noopener"
+                  aria-label={`${item.name} profili`}
                 />
               ),
           )}

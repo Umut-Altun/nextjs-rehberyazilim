@@ -4,7 +4,7 @@ import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/
 import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
+import { home, about, person, newsletter, social } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 
@@ -50,15 +50,32 @@ export default function Home() {
             name: home.title,
             description: home.description,
             url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+            image: `https://${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+            author: {
+              "@type": "Person",
+              name: person.name,
+              jobTitle: person.role,
+              image: {
+                "@type": "ImageObject",
+                url: `https://${baseURL}${person.avatar}`,
+              },
+              sameAs: [
+                ...social.filter(item => item.link).map(item => item.link)
+              ]
+            },
             publisher: {
               "@type": "Person",
               name: person.name,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
+                url: `https://${baseURL}${person.avatar}`,
               },
             },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://${baseURL}`
+            },
+            inLanguage: "tr-TR"
           }),
         }}
       />
@@ -117,3 +134,4 @@ export default function Home() {
     </Column>
   );
 }
+

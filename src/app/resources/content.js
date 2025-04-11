@@ -1,12 +1,12 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Umut",
-  lastName: "Altun",
+  firstName: "Rehber",
+  lastName: "Yazılım",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Yazılım ve Web Geliştiricisi",
+  role: "Yazılım ve Web Geliştirme Şirketi",
   avatar: "/images/avatar.jpg",
   location: "Europe/Istanbul", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["İngilizce", "Türkçe"], // optional: Leave the array empty if you don't want to display languages
@@ -14,11 +14,10 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>{person.firstName}'un Bültenine Abone Ol</>,
+  title: <>Rehber Yazılım Bültenine Abone Ol</>,
   description: (
     <>
-      Tasarım, teknoloji hakkında yazıyor ve yaratıcılık ile mühendisliğin kesişimi 
-      üzerine düşüncelerimi paylaşıyorum.
+      Yazılım, teknoloji ve dijital dönüşüm hakkında bilgilendirici içerikler ve güncel gelişmeleri sizinle paylaşıyoruz.
     </>
   ),
 };
@@ -56,21 +55,21 @@ const social = [
 
 const home = {
   label: "Ana Sayfa",
-  title: `${person.name}'un Portfolyosu`,
-  description: `${person.role} olarak çalışmalarımı sergileyen portfolyo web sitesi`,
-  headline: <>Yazılım Geliştirici ve İçerik Üreticisi</>,
+  title: `Rehber Yazılım - Web ve Yazılım Çözümleri`,
+  description: `Rehber Yazılım olarak modern web ve yazılım çözümleri sunuyoruz`,
+  headline: <>Modern Yazılım ve Web Çözümleri</>,
   subline: (
     <>
-      Ben Umut, <InlineCode>Yapay Rehber</InlineCode>'in kurucusu ve baş geliştiricisiyim. Web teknolojileri ve yapay zeka alanında 4+ yıllık deneyimimle, 
-      modern yazılım çözümleri geliştiriyor ve dijital dönüşüm süreçlerine öncülük ediyorum. 
+      <InlineCode>Rehber Yazılım</InlineCode> olarak işletmenize özel web siteleri, mobil uygulamalar ve yazılım çözümleri geliştiriyoruz. 
+      Dijital dönüşüm yolculuğunuzda teknoloji çözümleriyle yanınızdayız.
     </>
   ),
 };
 
 const about = {
-  label: "Hakkımda",
-  title: "Hakkımda",
-  description: `${person.location}'dan ${person.role} ${person.name} ile tanışın`,
+  label: "Hakkımızda",
+  title: "Hakkımızda",
+  description: `Rehber Yazılım ile tanışın - Modern teknoloji çözümleri`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -87,47 +86,46 @@ const about = {
     title: "Giriş",
     description: (
       <>
-      Yazılım geliştirme alanında deneyimli bir geliştirici ve içerik üreticisiyim. Web tabanlı projeler, masaüstü uygulamalar, otomasyon sistemleri ve kullanıcı dostu arayüzler geliştirerek, ihtiyaçlara özel çözümler sunuyorum. 
-      Farklı teknolojilerle gerçek dünyaya uygun projeler üretiyor; aynı zamanda bu süreçleri YouTube kanalımda paylaşarak öğrenmek isteyenlere rehberlik ediyorum.
+      Rehber Yazılım olarak, modern teknolojilerle işletmelerin dijital dönüşümüne öncülük ediyoruz. Web uygulamaları, masaüstü yazılımlar, özel geliştirme çözümleri ve e-ticaret sistemleri ile işletmenizin ihtiyaçlarına uygun çözümler sunuyoruz. Tecrübeli ekibimizle, her projeye özgün yaklaşımlar getirerek müşterilerimizin beklentilerini aşmayı hedefliyoruz.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Proje ve İş Deneyimi",
+    title: "Hizmet Alanlarımız",
     experiences: [
       {
-        company: "RehberAdisyon",
-        timeframe: "2022 - Present",
-        role: "Yazılım Geliştiricisi",
+        company: "Web Geliştirme",
+        timeframe: "2020 - Günümüz",
+        role: "Kurumsal Web Çözümleri",
         achievements: [
           <>
-            Restoran yönetimi ve dijital adisyon sistemleri geliştirerek işletmelerin operasyonel verimliliğini artırdım.
+            Şirketlere özel, modern ve responsive tasarımlı web siteleri geliştiriyoruz.
           </>,
           <>
-            Python ve Django kullanarak ölçeklenebilir web uygulamaları geliştirip müşteri memnuniyetine katkıda bulundum.
+            E-ticaret, rezervasyon sistemleri ve özel web uygulamaları ile işletmelerin dijital varlığını güçlendiriyoruz.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Web Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "University Projects",
-        timeframe: "2018 - 2020",
-        role: "Girişimci Geliştirici",
+        company: "Yazılım Çözümleri",
+        timeframe: "2020 - Günümüz",
+        role: "Özel Yazılım Geliştirme",
         achievements: [
           <>
-            Üniversite projeleri kapsamında öğrencilere yönelik öğrenme yönetim sistemleri ve etkileşimli web uygulamaları geliştirdim.
+            İşletme ihtiyaçlarına özel otomasyon sistemleri ve yazılım çözümleri geliştiriyoruz.
           </>,
           <>
-            Açık kaynak projelerde aktif rol alarak topluluk katkıları sağladım.
+            Kullanıcı dostu arayüzler ve güçlü altyapılarla, verimliliği artıran uygulamalar sunuyoruz.
           </>,
         ],
         images: [],
@@ -136,49 +134,49 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Eğitim",
+    title: "Uzmanlık Alanlarımız",
     institutions: [
       {
-        name: "Boğaziçi Üniversitesi",
-        description: <>Bilgisayar Mühendisliği alanında lisans eğitimi aldım.</>,
+        name: "Web Teknolojileri",
+        description: <>React, Next.js, Django ve diğer modern web teknolojileriyle profesyonel çözümler.</>,
       },
       {
-        name: "Coursera / Udemy",
-        description: <>Modern yazılım teknolojileri, metodolojileri ve proje yönetimi konularında online kurslar tamamladım.</>,
+        name: "Otomasyon Sistemleri",
+        description: <>İşletmelere özel talep ve ihtiyaçlara göre otomasyon yazılımları.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Teknik Beceriler",
+    title: "Teknolojilerimiz",
     skills: [
       {
-        title: "Figma",
-        description: <>Once UI ile Figma'da olağanüstü hızda prototip oluşturabiliyorum.</>,
+        title: "Modern Web Teknolojileri",
+        description: <>React, Next.js, TypeScript ve modern front-end teknolojileri ile gelişmiş kullanıcı deneyimleri sunuyoruz.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            alt: "Modern web teknolojileri",
             width: 16,
             height: 9,
           },
           {
             src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "Web uygulamaları",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Next.js + Once UI + Supabase ile yeni nesil uygulamalar geliştiriyorum.</>,
+        title: "Back-end Çözümleri",
+        description: <>Django, Node.js, ve SQL/NoSQL veritabanları ile güvenli ve ölçeklenebilir altyapılar kuruyoruz.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "Back-end teknolojileri",
             width: 16,
             height: 9,
           },
@@ -190,32 +188,24 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Yazılım ve teknoloji hakkında yazılar...",
-  description: `${person.name}'in son zamanlarda neler yaptığını okuyun`,
+  title: "Yazılım ve Teknoloji Rehberi",
+  description: `Rehber Yazılım'ın paylaştığı güncel teknoloji yazıları ve bilgilendirici kaynaklar`,
   // app/blog/posts'a yeni bir .mdx dosyası ekleyerek yeni blog gönderileri oluşturun
   // Tüm gönderiler /blog rotasında listelenecektir
 };
 
 const work = {
-  label: "Çalışmalar",
-  title: "Projelerim",
-  description: `${person.name} tarafından tasarlanan ve geliştirilen projeler`,
+  label: "Hizmetlerimiz",
+  title: "Projelerimiz ve Hizmetlerimiz",
+  description: `Rehber Yazılım tarafından geliştirilen projeler ve verdiğimiz hizmetler`,
   // Yeni proje sayfaları eklemek için app/blog/posts dizinine yeni bir .mdx dosyası ekleyin
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
   label: "Galeri",
-  title: "Fotoğraf galerim",
-  description: `${person.name} tarafından oluşturulan fotoğraf koleksiyonu`,
-  // Images from https://pexels.com
-  images: [
-    {
-      src: "/images/gallery/django.png",
-      alt: "django",
-      orientation: "horizontal",
-    },
-  ],
+  title: "Proje Galerimiz",
+  description: `Rehber Yazılım'ın tamamladığı projelerden görüntüler ve ekran görüntüleri`,
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

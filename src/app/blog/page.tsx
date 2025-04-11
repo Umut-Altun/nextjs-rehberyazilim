@@ -2,7 +2,7 @@ import { Column, Flex, Heading } from "@/once-ui/components";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL } from "@/app/resources";
-import { blog, person, newsletter } from "@/app/resources/content";
+import { blog, person, newsletter, social } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = blog.title;
@@ -12,14 +12,20 @@ export async function generateMetadata() {
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://${baseURL}/blog`,
+    },
     openGraph: {
       title,
       description,
       type: "website",
       url: `https://${baseURL}/blog`,
+      locale: "tr_TR",
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],
@@ -46,15 +52,32 @@ export default function Blog() {
             headline: blog.title,
             description: blog.description,
             url: `https://${baseURL}/blog`,
-            image: `${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
+            image: `https://${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
             author: {
               "@type": "Person",
               name: person.name,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
+                url: `https://${baseURL}${person.avatar}`,
+              },
+              jobTitle: person.role,
+              sameAs: [
+                ...social.filter(item => item.link).map(item => item.link)
+              ]
+            },
+            publisher: {
+              "@type": "Person",
+              name: person.name,
+              image: {
+                "@type": "ImageObject",
+                url: `https://${baseURL}${person.avatar}`,
               },
             },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://${baseURL}/blog`
+            },
+            inLanguage: "tr-TR"
           }),
         }}
       />
