@@ -47,7 +47,7 @@ export default function Gallery() {
             url: `https://${baseURL}/gallery`,
             image: gallery.images.map((image) => ({
               "@type": "ImageObject",
-              url: `${baseURL}${image.src}`,
+              url: `https://${baseURL}${image.src}`,
               description: image.alt,
             })),
             author: {

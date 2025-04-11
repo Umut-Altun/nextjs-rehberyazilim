@@ -206,6 +206,34 @@ const gallery = {
   label: "Galeri",
   title: "Proje Galerimiz",
   description: `Rehber Yazılım'ın tamamladığı projelerden görüntüler ve ekran görüntüleri`,
+  // Images from example projects
+  images: [
+    {
+      src: "/images/gallery/django.png",
+      alt: "Django Projesi",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/projects/rehberpos/adisyon-1.png",
+      alt: "Rehber POS",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/projects/rehberpos/adisyon-2.png",
+      alt: "Adisyon Sistemi",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/projects/rehberpos/adisyon-3.png",
+      alt: "Sipariş Ekranı",
+      orientation: "horizontal", 
+    },
+    {
+      src: "/images/projects/aicu/aicu.png",
+      alt: "Üniversite Web Sitesi",
+      orientation: "horizontal",
+    },
+  ],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
