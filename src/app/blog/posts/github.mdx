@@ -1,0 +1,113 @@
+---
+title: "Github İle Projelerinizin Versiyonlarını Tutun"
+publishedAt: "2025-04-16"
+image: "/images/gallery/github.png"
+summary: "Size GitHub reponuz için gerekli ayarları adım adım anlatacağım."
+tag: "GitHub"
+---
+
+İlk olarak bir .gitignore dosyası oluşturarak Git'in takip etmemesi gereken dosya ve klasörleri tanımlamış olucaz.
+Şimdi bu dosyayı oluşturduktan sonra, GitHub'a göndermek için şu adımları terminal veya komut istemcisinde çalıştırın.
+
+## Terminalde Çalıştıralacak Kodlar
+
+Git repo'nuzu başlatın:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "git init",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
+
+Tüm dosyaları staging area'ya ekleyin:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "git add .",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
+
+İlk commit'inizi yapın:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "git commit -m 'Initial commit'",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
+
+
+GitHub'da giderek boş bir repo oluşturun:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "https://github.com/",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
+
+Remote'u ekleyin (GitHub repo URL'nizi kullanın):
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "git remote add origin https://github.com/[kullanıcı-adınız]/edu_platform.git",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
+
+Main branch'inizi push edin:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "git push -u origin main",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
+
+Bu adımları takip ettiğinizde projeniz GitHub'a yüklenmiş olacaktır. İlerleyen zamanlarda yapacağınız değişiklikleri göndermek için:
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: "git add .",
+            code: "git push -u origin main",
+            code: "git push",
+            label: "Git repo'nuzu başlatın",
+            language: "markdown"
+        },
+    ]}
+    copyButton
+/>
